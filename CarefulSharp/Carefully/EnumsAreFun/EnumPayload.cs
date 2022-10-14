@@ -18,10 +18,27 @@ namespace Carefully.EnumsAreFun
     [Flags]
     public enum AbstractionTypes
     {
+        None = 0, // bin 0000 = 0
+        Sit = 1 << 1, // bin 0010 = 2
+        Stand = 1 << 2, // bin 0100 = 4
+        LeanOn = 1 << 3, // bin 1000 = 8
+    }
+
+    [Flags]
+    public enum BrokenFlagTypes
+    {
         None,
-        Sit,
-        Stand,
-        LeanOn,
+        Type1,
+        Type2,
+        Type3
+    }
+
+    public enum SpellingMistakes
+    {
+        Paid,
+        Void,
+        Cancelled,
+        Canceled,
     }
 
     public class EnumPayload
